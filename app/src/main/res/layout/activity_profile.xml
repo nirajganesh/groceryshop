@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#dddddd"
+    tools:context=".ProfileActivity">
+
+    <RelativeLayout
+        android:paddingBottom="40dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:id="@+id/applayout"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:background="#4F6D7A"
+            android:id="@+id/toolbar"
+            app:titleTextColor="#fff"
+            app:navigationIcon="@drawable/ic_baseline_arrow_back_ios_24"
+            app:title="Profile"
+            app:menu="@menu/profile_remenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_below="@id/applayout"
+        android:background="@drawable/profile_card_design"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/profile_image"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/profile_card_design"
+        />
+
+    <LinearLayout
+        android:id="@+id/layoutaddid"
+        android:layout_marginTop="40dp"
+        android:layout_below="@id/profile_image"
+         android:orientation="vertical"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         >
+
+
+     <LinearLayout
+         android:layout_marginTop="10dp"
+         android:layout_below="@id/profile_image"
+         android:orientation="horizontal"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         >
+
+         <ImageView
+             android:padding="13dp"
+             android:src="@drawable/person"
+             android:layout_margin="20dp"
+             android:background="@drawable/profile_card_design"
+             android:layout_width="50dp"
+             android:layout_height="50dp"
+             />
+         <LinearLayout
+             android:orientation="vertical"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             >
+             <TextView
+                 android:textColor="#474545"
+                 android:layout_marginTop="10dp"
+                 android:text="Name"
+                 android:textStyle="bold"
+                 android:fontFamily="@font/heebovariablefont_wght"
+                 android:textSize="20sp"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 />
+             <TextView
+                 android:textColor="#474545"
+                 android:layout_marginTop="5dp"
+                 android:text="Nirajganesh"
+                 android:fontFamily="@font/heebovariablefont_wght"
+                 android:textSize="20sp"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 />
+
+         </LinearLayout>
+
+
+     </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <ImageView
+            android:padding="13dp"
+            android:src="@drawable/ic_baseline_mail_24"
+            android:layout_margin="20dp"
+            android:background="@drawable/profile_card_design"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            />
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            >
+            <TextView
+                android:textColor="#474545"
+                android:layout_marginTop="10dp"
+                android:text="Phone No."
+                android:textStyle="bold"
+                android:fontFamily="@font/heebovariablefont_wght"
+                android:textSize="20sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+            <TextView
+                android:textColor="#474545"
+                android:layout_marginTop="5dp"
+                android:text="+91 7999107995"
+                android:fontFamily="@font/heebovariablefont_wght"
+                android:textSize="20sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+
+        </LinearLayout>
+
+
+
+
+        </LinearLayout>
+
+<!--        <LinearLayout-->
+<!--            android:layout_marginTop="20dp"-->
+<!--            android:orientation="horizontal"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            >-->
+
+<!--            <ImageView-->
+<!--                android:padding="13dp"-->
+<!--                android:src="@drawable/ic_baseline_lock_24"-->
+<!--                android:layout_margin="20dp"-->
+<!--                android:background="@drawable/profile_card_design"-->
+<!--                android:layout_width="50dp"-->
+<!--                android:layout_height="50dp"-->
+<!--                />-->
+<!--            <LinearLayout-->
+<!--                android:orientation="vertical"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                >-->
+<!--                <TextView-->
+<!--                    android:textColor="#474545"-->
+<!--                    android:layout_marginTop="10dp"-->
+<!--                    android:text="Password"-->
+<!--                    android:textStyle="bold"-->
+<!--                    android:fontFamily="@font/heebovariablefont_wght"-->
+<!--                    android:textSize="20sp"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    />-->
+<!--                <TextView-->
+<!--                    android:textColor="#474545"-->
+<!--                    android:layout_marginTop="5dp"-->
+<!--                    android:text="........."-->
+<!--                    android:textStyle="bold"-->
+<!--                    android:fontFamily="@font/heebovariablefont_wght"-->
+<!--                    android:textSize="20sp"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    />-->
+
+<!--            </LinearLayout>
+
+
+
+
+        </LinearLayout>   -->
+
+        <LinearLayout
+
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <ImageView
+                android:padding="13dp"
+                android:src="@drawable/ic_baseline_mail_24"
+                android:layout_margin="20dp"
+                android:background="@drawable/profile_card_design"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                />
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                >
+                <TextView
+                    android:textColor="#474545"
+                    android:layout_marginTop="10dp"
+                    android:text="Address"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/heebovariablefont_wght"
+                    android:textSize="20sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    />
+                <TextView
+                    android:textColor="#474545"
+                    android:layout_marginTop="5dp"
+                    android:text="Near sahu kirana stores\ntulsinager,kushalpur"
+                    android:fontFamily="@font/heebovariablefont_wght"
+                    android:textSize="20sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    />
+
+            </LinearLayout>
+
+
+
+
+        </LinearLayout>
+
+
+     </LinearLayout>
+    <Button
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginTop="50dp"
+        android:layout_below="@id/layoutaddid"
+        android:text="Log Out"
+        android:textSize="18sp"
+        android:textAllCaps="false"
+        android:textAlignment="center"
+        android:background="@drawable/card_shopnow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+
+    </RelativeLayout>
+</androidx.core.widget.NestedScrollView>

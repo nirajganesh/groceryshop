@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:backgroundTint="#fff"
+    android:background="#DEDEDE"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:id="@+id/applayoutid"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:background="#4F6D7A"
+            android:id="@+id/toolbar"
+            app:titleTextColor="#fff"
+            app:menu="@menu/toolbar_menu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:layout_below="@id/applayoutid"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/swipeid1"
+        android:layout_above="@id/navigationmenuid"
+        >
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+
+   <LinearLayout
+       android:orientation="vertical"
+       android:background="#fff"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       >
+       <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" >
+
+           <com.smarteist.autoimageslider.SliderLayout
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            android:background="#fff"
+            android:layout_alignParentTop="true"
+            android:id="@+id/imageSlider">
+
+            <ImageView
+                android:background="#8D000000"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                />
+
+            <LinearLayout
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="50dp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+                <TextView
+                    android:fontFamily="@font/heebovariablefont_wght"
+                    android:textColor="#fff"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:layout_marginLeft="10dp"
+                    android:text="Discout 50% OFF Every Product"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    />
+                <Button
+                    android:textStyle="bold"
+                    android:fontFamily="@font/heebovariablefont_wght"
+                    android:textSize="14sp"
+                    android:padding="5dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/card_shopnow"
+                    android:layout_width="110dp"
+                    android:text="Shop Now"
+                    android:layout_height="40dp"
+                    />
+            </LinearLayout>
+
+        </com.smarteist.autoimageslider.SliderLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+
+        <TextView
+            android:fontFamily="@font/prataregular"
+            android:textAlignment="center"
+            android:textSize="22sp"
+            android:textColor="#000"
+            android:id="@+id/allcategoriestext"
+            android:textStyle="bold"
+            android:visibility="invisible"
+            android:text="All Categories"
+            android:layout_marginTop="25dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+        <ProgressBar
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/allcategoriestext"
+            android:id="@+id/progressBarid"
+            android:layout_gravity="center"
+            android:visibility="invisible"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+            <com.facebook.shimmer.ShimmerFrameLayout
+                android:id="@+id/shimmerLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:shimmer_repeat_mode="restart"
+                app:shimmer_shape="radial">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <include layout="@layout/shimmer_categories"></include>
+
+                    <include layout="@layout/shimmer_categories"></include>
+
+                    <include layout="@layout/shimmer_categories"></include>
+
+                    <include layout="@layout/shimmer_categories"></include>
+
+                    <include layout="@layout/shimmer_categories"></include>
+
+
+                </LinearLayout>
+            </com.facebook.shimmer.ShimmerFrameLayout>
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_marginTop="25dp"
+            android:layout_below="@id/allcategoriestext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/recyclerviewid"
+            android:scrollbars="vertical"
+            />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+
+        <TextView
+            android:fontFamily="@font/prataregular"
+            android:textAlignment="center"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="#000"
+            android:id="@+id/topproducttext"
+            android:layout_marginBottom="5dp"
+            android:text="Top Products"
+            android:visibility="invisible"
+            android:layout_marginTop="25dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+        <ProgressBar
+            android:layout_below="@id/topproducttext"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/progressBarid1"
+            android:layout_gravity="center"
+            android:visibility="invisible"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+            <com.facebook.shimmer.ShimmerFrameLayout
+                android:id="@+id/shimmerLayout1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:shimmer_repeat_mode="restart"
+                app:shimmer_shape="radial">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <include layout="@layout/shimmer_categories"></include>
+
+                    <include layout="@layout/shimmer_categories"></include>
+
+                    <include layout="@layout/shimmer_categories"></include>
+
+                    <include layout="@layout/shimmer_categories"></include>
+
+                    <include layout="@layout/shimmer_categories"></include>
+
+
+                </LinearLayout>
+            </com.facebook.shimmer.ShimmerFrameLayout>
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_below="@id/topproducttext"
+            android:layout_marginTop="25dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/recyclerviewid1"
+
+            />
+          </RelativeLayout>
+         </LinearLayout>
+
+           </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:background="#4F6D7A"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:itemIconTint="@color/color"
+        app:itemTextColor="@color/color"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/navigationmenuid"
+        app:itemIconPadding="10dp"
+        app:menu="@menu/bottom_menu"
+        app:itemIconSize="30dp"
+        />
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:visibility="invisible"
+        android:layout_above="@id/navigationmenuid"
+        android:id="@+id/coordinatorid"
+        >
+        <Button
+            android:id="@+id/buttonid"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            />
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</RelativeLayout>
+

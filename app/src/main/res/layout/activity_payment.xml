@@ -1,0 +1,535 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#dddddd"
+    android:paddingBottom="10dp"
+    tools:context=".PaymentActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:id="@+id/applayoutid"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.Toolbar
+                android:background="#4F6D7A"
+                android:id="@+id/toolbar"
+                app:titleTextColor="#fff"
+                app:title="Order"
+                app:navigationIcon="@drawable/ic_baseline_arrow_back_ios_24"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <LinearLayout
+            android:id="@+id/layouttopid"
+            android:gravity="center"
+            android:layout_marginTop="20dp"
+            android:layout_below="@id/applayoutid"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <ImageButton
+                android:src="@drawable/report"
+                android:background="@drawable/order_color_design"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                />
+            <View
+                android:layout_marginLeft="-1dp"
+                android:background="#E584A2"
+                android:layout_width="60dp"
+                android:layout_height="10dp"
+                />
+            <ImageButton
+                android:layout_marginLeft="-1dp"
+                android:src="@drawable/card"
+                android:background="@drawable/order_color_design"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                />
+            <View
+                android:background="#80FFFFFF"
+                android:layout_width="60dp"
+                android:layout_height="10dp"
+                />
+            <ImageButton
+                android:src="@drawable/check"
+                android:background="@drawable/tracker_order_design"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                />
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:id="@+id/summeryidlayout"
+            android:gravity="center"
+            android:layout_below="@id/layouttopid"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <TextView
+                android:textColor="#000"
+                android:layout_marginRight="50dp"
+                android:fontFamily="@font/heebovariablefont_wght"
+                android:textSize="14sp"
+                android:text="Summary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+            <TextView
+                android:textColor="#000"
+                android:layout_marginRight="25dp"
+                android:fontFamily="@font/heebovariablefont_wght"
+                android:textSize="14sp"
+                android:text="Payment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+            <TextView
+                android:textColor="#80000000"
+                android:layout_marginLeft="20dp"
+                android:fontFamily="@font/heebovariablefont_wght"
+                android:textSize="14sp"
+                android:text="Finish"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+
+
+
+        </LinearLayout>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardidtop"
+            android:layout_margin="10dp"
+            android:backgroundTint="#dddddd"
+            android:layout_below="@id/summeryidlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <LinearLayout
+                android:padding="10dp"
+                android:background="@drawable/summary_total_design"
+                android:id="@+id/layoutiddesign"
+                android:layout_below="@id/profile_image"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+                <LinearLayout
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+                    <TextView
+                        android:textSize="20dp"
+                        android:fontFamily="@font/heebovariablefont_wght"
+                        android:textColor="#000"
+                        android:text="Contact Information"
+                        android:layout_gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        />
+
+                    <TextView
+                        android:layout_marginLeft="5dp"
+                        android:textColor="#474545"
+                        android:layout_marginTop="20dp"
+                        android:text="Name"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/heebovariablefont_wght"
+                        android:textSize="20sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        />
+                    <EditText
+                        android:theme="@style/MyEditTextTheme"
+                        android:textColorHint="#8A474545"
+                        android:textColor="#000000"
+                        android:layout_marginTop="5dp"
+                        android:hint="Enter the your name...."
+                        android:fontFamily="@font/heebovariablefont_wght"
+                        android:textSize="20sp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_marginTop="20dp"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+                    <TextView
+                        android:layout_marginLeft="5dp"
+                        android:textColor="#474545"
+                        android:layout_marginTop="10dp"
+                        android:text="Password"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/heebovariablefont_wght"
+                        android:textSize="20sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        />
+                    <EditText
+                        android:theme="@style/MyEditTextTheme"
+                        android:textColorHint="#86474545"
+                        android:textColor="#000000"
+                        android:layout_marginTop="5dp"
+                        android:hint="Enter the your password....."
+                        android:fontFamily="@font/heebovariablefont_wght"
+                        android:textSize="20sp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardidtop3"
+            android:layout_margin="10dp"
+            android:backgroundTint="#dddddd"
+            android:layout_below="@id/cardidtop"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <LinearLayout
+                android:padding="10dp"
+                android:background="@drawable/summary_total_design"
+                android:id="@+id/layoutiddesign1"
+                android:layout_below="@id/profile_image"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+                <LinearLayout
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+                    <TextView
+                        android:textSize="20dp"
+                        android:fontFamily="@font/heebovariablefont_wght"
+                        android:textColor="#000"
+                        android:text="Delivery Address"
+                        android:layout_gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        />
+
+                    <TextView
+                        android:layout_marginLeft="5dp"
+                        android:textColor="#474545"
+                        android:layout_marginTop="20dp"
+                        android:text="Address"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/heebovariablefont_wght"
+                        android:textSize="20sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        />
+                    <EditText
+                        android:theme="@style/MyEditTextTheme"
+                        android:textColorHint="#8A474545"
+                        android:textColor="#000000"
+                        android:layout_marginTop="5dp"
+                        android:hint="Enter the your address...."
+                        android:fontFamily="@font/heebovariablefont_wght"
+                        android:textSize="20sp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_marginTop="20dp"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+                    <TextView
+                        android:layout_marginLeft="5dp"
+                        android:textColor="#474545"
+                        android:layout_marginTop="10dp"
+                        android:text="City"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/heebovariablefont_wght"
+                        android:textSize="20sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        />
+                    <EditText
+                        android:theme="@style/MyEditTextTheme"
+                        android:textColorHint="#86474545"
+                        android:textColor="#000000"
+                        android:layout_marginTop="5dp"
+                        android:hint="Enter the your city....."
+                        android:fontFamily="@font/heebovariablefont_wght"
+                        android:textSize="20sp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_marginTop="20dp"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+                    <TextView
+                        android:layout_marginLeft="5dp"
+                        android:textColor="#474545"
+                        android:layout_marginTop="10dp"
+                        android:text="Pincode"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/heebovariablefont_wght"
+                        android:textSize="20sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        />
+                    <EditText
+                        android:theme="@style/MyEditTextTheme"
+                        android:textColorHint="#86474545"
+                        android:textColor="#000000"
+                        android:layout_marginTop="5dp"
+                        android:hint="Enter the your pincode....."
+                        android:fontFamily="@font/heebovariablefont_wght"
+                        android:textSize="20sp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_marginTop="20dp"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+                    <TextView
+                        android:layout_marginLeft="5dp"
+                        android:textColor="#474545"
+                        android:layout_marginTop="10dp"
+                        android:text="Remark"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/heebovariablefont_wght"
+                        android:textSize="20sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        />
+                    <EditText
+                        android:theme="@style/MyEditTextTheme"
+                        android:textColorHint="#86474545"
+                        android:textColor="#000000"
+                        android:layout_marginTop="5dp"
+                        android:hint="Enter the your remark....."
+                        android:fontFamily="@font/heebovariablefont_wght"
+                        android:textSize="20sp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardidtop2"
+            android:layout_margin="10dp"
+            android:backgroundTint="#dddddd"
+            android:layout_below="@id/cardidtop3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <LinearLayout
+                android:background="@drawable/summary_total_design"
+                android:id="@+id/layoutiddesign2"
+                android:layout_below="@id/profile_image"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+                <LinearLayout
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:paddingBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+                    <TextView
+                        android:textSize="20dp"
+                        android:fontFamily="@font/heebovariablefont_wght"
+                        android:textColor="#000"
+                        android:text="Payment Information"
+                        android:layout_gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        />
+                    <LinearLayout
+                        android:padding="5dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/card_wishlist_design"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        >
+
+                        <ImageView
+                            android:background="@drawable/cardblace"
+                            android:layout_marginLeft="15dp"
+                            android:textColor="#474545"
+                            android:layout_marginTop="4dp"
+                            android:text="Name"
+                            android:textStyle="bold"
+                            android:fontFamily="@font/heebovariablefont_wght"
+                            android:textSize="20sp"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            />
+                        <TextView
+                            android:textStyle="bold"
+                            android:textAlignment="center"
+                            android:textColorHint="#8A474545"
+                            android:textColor="#000000"
+                            android:layout_marginTop="5dp"
+                            android:text="Card"
+                            android:fontFamily="@font/heebovariablefont_wght"
+                            android:textSize="20sp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:padding="5dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/card_wishlist_design"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        >
+
+                        <ImageView
+                            android:background="@drawable/paypal"
+                            android:layout_marginLeft="15dp"
+                            android:textColor="#474545"
+                            android:layout_marginTop="4dp"
+                            android:textStyle="bold"
+                            android:fontFamily="@font/heebovariablefont_wght"
+                            android:textSize="20sp"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            />
+                        <TextView
+                            android:textStyle="bold"
+                            android:textAlignment="center"
+                            android:textColorHint="#8A474545"
+                            android:textColor="#000000"
+                            android:layout_marginTop="5dp"
+                            android:text="Upi payment"
+                            android:fontFamily="@font/heebovariablefont_wght"
+                            android:textSize="20sp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:padding="5dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/card_wishlist_design"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        >
+
+                        <ImageView
+                            android:background="@drawable/cashondelivery"
+                            android:layout_marginLeft="15dp"
+                            android:textColor="#474545"
+                            android:layout_marginTop="4dp"
+                            android:textStyle="bold"
+                            android:fontFamily="@font/heebovariablefont_wght"
+                            android:textSize="20sp"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            />
+                        <TextView
+                            android:textStyle="bold"
+                            android:textAlignment="center"
+                            android:textColorHint="#8A474545"
+                            android:textColor="#000000"
+                            android:layout_marginTop="5dp"
+                            android:text="Cash on delivery"
+                            android:fontFamily="@font/heebovariablefont_wght"
+                            android:textSize="20sp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <Button
+            android:id="@+id/paymentcountinue"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginTop="50dp"
+            android:layout_below="@id/cardidtop2"
+            android:text="Continue"
+            android:textSize="18sp"
+            android:textAllCaps="false"
+            android:textAlignment="center"
+            android:background="@drawable/card_shopnow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+
+    </RelativeLayout>
+
+
+
+
+</androidx.core.widget.NestedScrollView>

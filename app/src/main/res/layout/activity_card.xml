@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#dddddd"
+    tools:context=".CardActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:id="@+id/applayout"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:background="#4F6D7A"
+            android:id="@+id/toolbar"
+            app:title="Cart"
+            app:navigationIcon="@drawable/ic_baseline_arrow_back_ios_24"
+            app:titleTextColor="#fff"
+            android:layout_width="match_parent"
+            app:menu="@menu/cart_menu"
+            android:layout_height="wrap_content"
+            />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:layout_below="@id/applayout"
+        android:id="@+id/shimmerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:shimmer_repeat_mode="restart"
+        app:shimmer_shape="radial">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <include layout="@layout/shimmer_card"></include>
+
+            <include layout="@layout/shimmer_card"></include>
+
+            <include layout="@layout/shimmer_card"></include>
+
+            <include layout="@layout/shimmer_card"></include>
+
+            <include layout="@layout/shimmer_card"></include>
+
+
+        </LinearLayout>
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_below="@id/applayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/recyclerviewid"
+        android:layout_above="@id/linearlayout1"
+        android:layout_marginBottom="10dp"
+        />
+    <LinearLayout
+        android:id="@+id/linearlayout1"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:background="#4F6D7A"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        >
+        <TextView
+            android:layout_marginLeft="20dp"
+            android:text="Total:"
+            android:textSize="18sp"
+            android:textColor="#fff"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            >
+
+        </TextView>
+        <ImageView
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="3dp"
+            android:background="@drawable/rupee"
+            android:layout_gravity="center"
+            android:layout_width="14dp"
+            android:layout_height="17dp"
+            />
+        <TextView
+            android:layout_marginLeft="10dp"
+            android:textColor="#fff"
+            android:text="price"
+            android:layout_gravity="center"
+            android:textStyle="bold"
+            android:textSize="16dp"
+            android:id="@+id/priceid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+
+
+
+
+    </LinearLayout>
+
+    <Button
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:id="@+id/addid2"
+        android:layout_below="@+id/linearlayout"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginRight="15dp"
+        android:text="Checkout"
+        android:layout_marginBottom="5dp"
+        android:fontFamily="@font/heebovariablefont_wght"
+        android:background="@drawable/card_shopnow"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        />
+
+</RelativeLayout>

@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#DDDDDD"
+    tools:context=".ProductviewActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:id="@+id/applayout"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:background="#4F6D7A"
+            android:id="@+id/toolbar"
+            app:title="Product"
+            app:navigationIcon="@drawable/ic_baseline_arrow_back_ios_24"
+            app:titleTextColor="#fff"
+            android:layout_width="match_parent"
+            app:menu="@menu/cart_menu"
+            android:layout_height="wrap_content"
+            />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ImageView
+        android:layout_below="@id/applayout"
+        android:layout_marginTop="20dp"
+        android:id="@+id/imageid"
+        android:layout_centerHorizontal="true"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        />
+    <androidx.cardview.widget.CardView
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/imageid"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+         android:backgroundTint="#DEDEDE"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/product_card_design" >
+
+            <TextView
+                android:fontFamily="@font/prataregular"
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="60dp"
+                android:id="@+id/nameid"
+                android:text="Cup cake"
+                android:textColor="#000"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+
+            <LinearLayout
+                android:layout_marginStart="60dp"
+                android:id="@+id/linearlayout"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/nameid"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                >
+            <ImageView
+                android:layout_marginTop="2dp"
+                android:background="@drawable/rupee"
+                android:layout_weight="0.5"
+                android:layout_gravity="center"
+                android:layout_width="15dp"
+                android:layout_height="17dp"
+                />
+            <TextView
+                android:fontFamily="@font/heebovariablefont_wght"
+                android:layout_marginStart="5dp"
+                android:textColor="#000"
+                android:text="price"
+                android:textStyle="bold"
+                android:textSize="18dp"
+                android:id="@+id/priceid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/starid"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="60dp"
+                android:layout_below="@id/linearlayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+                <ImageView
+                    android:background="@drawable/ic_baseline_star_rate_24"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    />
+                <ImageView
+                    android:background="@drawable/ic_baseline_star_rate_24"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    />
+                <ImageView
+                    android:background="@drawable/ic_baseline_star_rate_24"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    />
+                <ImageView
+                    android:background="@drawable/ic_baseline_star_rate_24"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    />
+                <ImageView
+                    android:background="@drawable/ic_baseline_star_rate_24"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="60dp"
+                android:layout_below="@id/starid"
+                android:textColor="#000"
+                android:text="Details"
+                android:textSize="20sp"
+                android:fontFamily="@font/prataregular"
+                android:id="@+id/detailid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+            <Button
+                android:layout_marginLeft="60dp"
+                android:layout_below="@id/detailid"
+                android:background="@color/colorAccent"
+                android:layout_width="50dp"
+                android:layout_height="5dp"
+                />
+
+
+            <TextView
+                android:fontFamily="@font/heebovariablefont_wght"
+                android:layout_below="@id/detailid"
+                android:layout_marginStart="60dp"
+                android:layout_marginTop="20dp"
+                android:id="@+id/descriptionid"
+                android:text="The Lorum Ipsum is the dummy text\nfor using the design purpose "
+                android:textColor="#94000000"
+                android:textSize="14sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+            <LinearLayout
+                android:layout_marginStart="60dp"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/descriptionid"
+                android:layout_width="120dp"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                >
+                <ImageButton
+                    android:background="@drawable/card_shopnow"
+                    android:src="@drawable/ic_baseline_minimize_24"
+                    android:layout_marginTop="15dp"
+                    android:paddingBottom="15dp"
+                    android:layout_below="@id/recyclerviewid"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:id="@+id/minusid"
+                    android:layout_alignParentRight="true"
+                    />
+
+                <TextView
+                    android:id="@+id/textquantityid"
+                    android:textAlignment="center"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginStart="15dp"
+                    android:text="1"
+                    android:textColor="#000"
+                    android:textSize="18sp"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    />
+                <ImageButton
+                    android:background="@drawable/card_shopnow"
+                    android:src="@drawable/ic_baseline_add_24"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_below="@id/recyclerviewid"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:id="@+id/plusid"
+                    android:layout_alignParentRight="true"
+                    />
+
+            </LinearLayout>
+
+
+             <Button
+                 android:textColor="#000"
+                 android:text="Wishlist"
+                 android:layout_marginStart="60dp"
+                 android:layout_marginBottom="20dp"
+                 android:layout_alignParentBottom="true"
+                 android:background="@drawable/card_wishlist_design"
+                 android:layout_width="120dp"
+                 android:layout_height="50dp"
+                 />
+            <Button
+                android:id="@+id/addcartid"
+                android:padding="5dp"
+                android:text="Add To Cart"
+                android:layout_marginRight="30dp"
+                android:layout_marginBottom="20dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/card_shopnow"
+                android:layout_width="130dp"
+                android:layout_height="50dp"
+                />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+
+</RelativeLayout>

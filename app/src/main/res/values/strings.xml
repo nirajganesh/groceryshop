@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Groceryshop</string>
+    <string name="ver_text">Please type the verification code sent to</string>
+</resources>

@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#dddddd"
+    tools:context=".SignupActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:id="@+id/applayoutid"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:background="#4F6D7A"
+            android:id="@+id/toolbar"
+            app:titleTextColor="#fff"
+            app:navigationIcon="@drawable/ic_baseline_arrow_back_ios_24"
+            app:title="SignUp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutiddesign"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="30dp"
+        android:layout_below="@id/applayoutid"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <TextView
+            android:layout_marginLeft="5dp"
+            android:textColor="#474545"
+            android:layout_marginTop="10dp"
+            android:text="Name"
+            android:textStyle="bold"
+            android:fontFamily="@font/heebovariablefont_wght"
+            android:textSize="18sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+        <EditText
+            android:id="@+id/nameeditid"
+            android:theme="@style/MyEditTextTheme"
+            android:textColorHint="#8A474545"
+            android:textColor="#000000"
+            android:layout_marginTop="5dp"
+            android:hint="Enter the your name...."
+            android:fontFamily="@font/heebovariablefont_wght"
+            android:textSize="18sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+
+    </LinearLayout>
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <TextView
+                android:layout_marginLeft="5dp"
+                android:textColor="#474545"
+                android:layout_marginTop="10dp"
+                android:text="Phone no."
+                android:textStyle="bold"
+                android:fontFamily="@font/heebovariablefont_wght"
+                android:textSize="18sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+            <EditText
+                android:inputType="number"
+                android:id="@+id/phoneditid"
+                android:theme="@style/MyEditTextTheme"
+                android:textColorHint="#8A474545"
+                android:textColor="#000000"
+                android:layout_marginTop="5dp"
+                android:hint="Enter the your phoneno...."
+                android:fontFamily="@font/heebovariablefont_wght"
+                android:textSize="18sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+
+        </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <TextView
+            android:layout_marginLeft="5dp"
+            android:textColor="#474545"
+            android:layout_marginTop="10dp"
+            android:text="Email id"
+            android:textStyle="bold"
+            android:fontFamily="@font/heebovariablefont_wght"
+            android:textSize="18sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+        <EditText
+            android:inputType="textEmailAddress"
+            android:id="@+id/emaileditid"
+            android:theme="@style/MyEditTextTheme"
+            android:textColorHint="#8B474545"
+            android:textColor="#000000"
+            android:layout_marginTop="5dp"
+            android:hint="Enter the your email id...."
+            android:fontFamily="@font/heebovariablefont_wght"
+            android:textSize="18sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="20dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <TextView
+                android:layout_marginLeft="5dp"
+                android:textColor="#474545"
+                android:layout_marginTop="10dp"
+                android:text="Password"
+                android:textStyle="bold"
+                android:fontFamily="@font/heebovariablefont_wght"
+                android:textSize="18sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+            <EditText
+                android:id="@+id/passwordid"
+                android:theme="@style/MyEditTextTheme"
+                android:textColorHint="#86474545"
+                android:textColor="#000000"
+                android:layout_marginTop="5dp"
+                android:hint="Enter the your password....."
+                android:fontFamily="@font/heebovariablefont_wght"
+                android:textSize="18sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+    <Button
+        android:id="@+id/continueid"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="40dp"
+        android:layout_below="@id/layoutiddesign"
+        android:text="Continue"
+        android:textSize="18sp"
+        android:textAllCaps="false"
+        android:textAlignment="center"
+        android:background="@drawable/card_shopnow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+
+    <TextView
+        android:textAlignment="center"
+        android:layout_marginTop="5dp"
+        android:textColor="#000"
+        android:text="bhghh"
+        android:layout_below="@id/continueid"
+        android:id="@+id/codeid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+
+</RelativeLayout>

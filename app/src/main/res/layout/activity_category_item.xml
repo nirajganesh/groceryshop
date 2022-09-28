@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#dddddd"
+    tools:context=".CategoryItemActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:id="@+id/applayout"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:background="#4F6D7A"
+            android:id="@+id/toolbar"
+            app:title="Categories"
+            app:navigationIcon="@drawable/ic_baseline_arrow_back_ios_24"
+            app:titleTextColor="#fff"
+            android:layout_width="match_parent"
+            app:menu="@menu/toolbar_menu"
+            android:layout_height="wrap_content"
+            />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:layout_below="@id/applayout"
+        android:id="@+id/shimmerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:shimmer_repeat_mode="restart"
+        app:shimmer_shape="radial">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <include layout="@layout/shimmer_categoriesclick"></include>
+
+            <include layout="@layout/shimmer_categoriesclick"></include>
+
+            <include layout="@layout/shimmer_categoriesclick"></include>
+
+            <include layout="@layout/shimmer_categoriesclick"></include>
+
+            <include layout="@layout/shimmer_categoriesclick"></include>
+
+
+        </LinearLayout>
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/applayout"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:id="@+id/recyclerviewid"
+        />
+    <TextView
+        android:fontFamily="@font/heebovariablefont_wght"
+        android:textSize="20sp"
+        android:textColor="#000"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="10dp"
+        android:text="Popular items"
+        android:id="@+id/textid"
+        android:layout_below="@+id/recyclerviewid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+      <ImageButton
+          android:background="@drawable/sort_list_view"
+          android:src="@drawable/exchange_alt_solid"
+          android:layout_marginTop="10dp"
+          android:layout_below="@id/recyclerviewid"
+          android:layout_width="30dp"
+          android:layout_height="30dp"
+          android:id="@+id/sortid"
+          android:layout_marginRight="10dp"
+          android:layout_alignParentRight="true"
+
+          />
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:layout_below="@id/sortid"
+        android:id="@+id/shimmerLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:shimmer_repeat_mode="restart"
+        app:shimmer_shape="radial">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <include layout="@layout/shimmer_categories"></include>
+
+            <include layout="@layout/shimmer_categories"></include>
+
+            <include layout="@layout/shimmer_categories"></include>
+
+            <include layout="@layout/shimmer_categories"></include>
+
+            <include layout="@layout/shimmer_categories"></include>
+
+
+        </LinearLayout>
+    </com.facebook.shimmer.ShimmerFrameLayout>
+       <androidx.recyclerview.widget.RecyclerView
+           android:layout_marginTop="20dp"
+           android:id="@+id/recyclerviewid1"
+           android:layout_below="@id/textid"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           />
+</RelativeLayout>
